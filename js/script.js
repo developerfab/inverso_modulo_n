@@ -3,6 +3,9 @@ function inverso(){
 
 	var a = document.getElementById('var_a').value;
 	var n = document.getElementById('var_n').value;
+	var prueba = document.getElementById('prueba');
+	prueba.innerHTML="";
+
 	if(!comprobar(a,n)){
 		var texto = "<div class='alert alert-danger alert-dismissible fade in'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'></span><span class='sr-only'>Close</span></button><strong>los numeros no son primos relativos</strong></div>";
 		document.getElementById('rta').innerHTML = texto;
@@ -14,6 +17,7 @@ function inverso(){
 	}
 	var texto = "<div class='alert alert-warning alert-dismissible fade in'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'></span><span class='sr-only'>Close</span></button><strong>inverso de "+a+" es: "+x+"</strong></div>";
 	document.getElementById('rta').innerHTML = texto;
+	prueba.innerHTML="<strong>PRUEBA</strong><br>( "+a+" ) * ( "+x+" ) mod "+n+" = 1";
 }
 
 /** comprobar
